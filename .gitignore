@@ -1,3 +1,4 @@
 mickey/
 __pycache__
 .DS_Store
+_.pid
