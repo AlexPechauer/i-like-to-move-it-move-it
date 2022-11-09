@@ -1,25 +1,9 @@
 
-
-"""
-Make a virtual environment, do a pip install pyautogui
-
-Activates by
-1: Putting cursor at top of screen where y = 0,
-2: By not moving mouse for SET_TIME.
-
-Program runs continuously with terminal window showing "On." Program will crash
-when cursor location in top left corner, (0,0), or computer is locked.
-Set pyautogui.FAILSAFE = False to disable. Program would then persist after computer
-is locked
-"""
-
 import pyautogui, time
 
 pyautogui.FAILSAFE = True
 
 SET_TIME = 150
-
-# print("On")
 
 def move_click(num):
   x, y = pyautogui.position()
@@ -34,13 +18,6 @@ while(True):
   time.sleep(.25) #Required to record that the cursor has moved.
   x2, y2 = pyautogui.position()
 
-  # print('x: ',x, 'y: ', y)
-
-#left x 1080 to 0
-#left y 1410 509
-
-#right x 1 to 1919
-#right y 1080 0
   ###Main program driver####
   if(y==0):
     move_click(1)

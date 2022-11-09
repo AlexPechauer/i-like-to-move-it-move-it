@@ -3,14 +3,11 @@ from daemon import Daemon
 import sys, time
 import os
 
-
-
 class Mouse(Daemon):
-  # def __init__(self):
 
   def run(self):
     self.dir_path = os.path.dirname(os.path.realpath(__file__))
-    self.python_bin = self.dir_path + "/mickey/bin/python3"
+    self.python_bin = "/Users/alexpechauer/.local/share/virtualenvs/i-like-to-move-it-move-it-i7pMm2RZ/bin/python3"
     self.script_file = self.dir_path + "/mickey.py"
     self.mover = subprocess.Popen([self.python_bin, self.script_file])
     while True:
